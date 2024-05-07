@@ -14,10 +14,10 @@ try {
     $conn = pdo_get_connection();
     $stmt = $conn->query("SHOW TABLES");
     $tables = $stmt->fetchAll(PDO::FETCH_NUM);
-    echo "Connected successfully. Here are your tables: \n";
-    foreach($tables as $table) {
-        echo $table[0], "\n";
-    }
+    // echo "Connected successfully. Here are your tables: \n";
+    // foreach($tables as $table) {
+    //     echo $table[0], "\n";
+    // }
 } catch(PDOException $e) {
     echo "\n Connection failed: " . $e->getMessage();
 }
