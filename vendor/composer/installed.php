@@ -1,9 +1,9 @@
 <?php return array(
     'root' => array(
         'name' => 'vendor/projectneee',
-        'pretty_version' => 'dev-master',
-        'version' => 'dev-master',
-        'reference' => '67a8a103e78d9ed96ebd85d9d4c78a065d1fd549',
+        'pretty_version' => 'dev-main',
+        'version' => 'dev-main',
+        'reference' => '57e966bc041445cd684e9c6031a6f7d3e4af2bec',
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -35,9 +35,9 @@
             ),
         ),
         'vendor/projectneee' => array(
-            'pretty_version' => 'dev-master',
-            'version' => 'dev-master',
-            'reference' => '67a8a103e78d9ed96ebd85d9d4c78a065d1fd549',
+            'pretty_version' => 'dev-main',
+            'version' => 'dev-main',
+            'reference' => '57e966bc041445cd684e9c6031a6f7d3e4af2bec',
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),

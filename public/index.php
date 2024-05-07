@@ -6,9 +6,9 @@ include "../app/Models/book.php";
 include "../app/Views/header.php";
 include "../app/Controllers/book.php";
 require __DIR__ . '/../vendor/autoload.php';
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
+
+
+
 $books = loadall_book();
 if (isset($_GET['act']) && ($_GET['act'])) {
     $act = $_GET['act'];
@@ -28,7 +28,9 @@ if (isset($_GET['act']) && ($_GET['act'])) {
             $book = getOneBook($_GET['id_book']);
             include "../app/Views/book/detailBook.php";
             break;
-            
+        case "updateBook":
+            editBookController();
+            break;
     }
 } else {
     include "../app/Views/home.php";

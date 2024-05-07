@@ -18,13 +18,14 @@ function insert_book($id_danhmuc, $bookname, $author, $hinh, $price, $rating, $m
 };
 
 function getOneBook ($id_book){
-    $sql = "select * from book where id_book = $id_book";
-    $book = pdo_query_one($sql);
+    $sql = "select * from book where id_book = ?";
+    $book = pdo_query_one($sql, $id_book);
     return $book;
 }
 function update_book($id_book, $id_danhmuc, $bookname, $author, $hinh, $price, $rating, $mota, $nxb)
 {
     $sql = "update book set id_danhmuc = ?, bookname = ?, author = ?, hinh = ?, price = ?, rating = ?, mota = ?, nxb = ? where id_book = ?";
+    echo "sssssssssssssssss";
     pdo_execute($sql, $id_danhmuc, $bookname, $author, $hinh, $price, $rating, $mota, $nxb, $id_book);
 }
 ?>
