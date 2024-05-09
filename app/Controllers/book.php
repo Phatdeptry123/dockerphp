@@ -40,7 +40,7 @@ function editBookController(
         if (move_uploaded_file($_FILES["hinh"]["tmp_name"], $target_file)) {
             echo "The file " . htmlspecialchars(basename($_FILES["hinh"]["name"])) . " has been uploaded.";
         } else {
-            // echo "Sorry, there was an error uploading your file.";
+            echo "Sorry, there was an error uploading your file.";
         }
         ;
         $price = $_POST['price'];
@@ -53,6 +53,16 @@ function editBookController(
 
     }
 }
+function searchBookController()
+{
+    if (isset($_POST['search']) && ($_POST['search'])) {
+        $books = searchBook($_POST['search']);
+    }
+    include "../app/Views/book/searchBook.php";
+}
+function fillterBookController()
+{
+    $books = fillterBook($_GET['id_danhmuc']);
+    include "../app/Views/book/fillterBook.php";
+}
 
-
-?>

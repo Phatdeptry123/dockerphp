@@ -68,3 +68,14 @@ if (isset($thongbao) && ($thongbao != "")) {
         </form>S
     </div>
 </div>
+
+<script>
+document.querySelector('input[type="file"]').addEventListener('change', function(event) {
+    var reader = new FileReader();
+    reader.onload = function(event) {
+        var imgElement = document.querySelector('img');
+        imgElement.src = event.target.result;
+    };
+    reader.readAsDataURL(event.target.files[0]);
+});
+</script>

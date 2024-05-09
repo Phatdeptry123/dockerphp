@@ -3,7 +3,7 @@
         'name' => 'vendor/projectneee',
         'pretty_version' => 'dev-main',
         'version' => 'dev-main',
-        'reference' => '57e966bc041445cd684e9c6031a6f7d3e4af2bec',
+        'reference' => '673b3c9b1046f998fb41b12eb75ae26d2216cddc',
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -37,7 +37,7 @@
         'vendor/projectneee' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
-            'reference' => '57e966bc041445cd684e9c6031a6f7d3e4af2bec',
+            'reference' => '673b3c9b1046f998fb41b12eb75ae26d2216cddc',
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),

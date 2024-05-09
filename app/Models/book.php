@@ -25,7 +25,19 @@ function getOneBook ($id_book){
 function update_book($id_book, $id_danhmuc, $bookname, $author, $hinh, $price, $rating, $mota, $nxb)
 {
     $sql = "update book set id_danhmuc = ?, bookname = ?, author = ?, hinh = ?, price = ?, rating = ?, mota = ?, nxb = ? where id_book = ?";
-    echo "sssssssssssssssss";
     pdo_execute($sql, $id_danhmuc, $bookname, $author, $hinh, $price, $rating, $mota, $nxb, $id_book);
 }
-?>
+
+function searchBook($search)
+{
+    $sql = "select * from book where bookname like '%$search%'";
+    $books = pdo_query($sql);
+    return $books;
+}
+
+function fillterBook($id_danhmuc)
+{
+    $sql = "select * from book where id_danhmuc = $id_danhmuc";
+    $books = pdo_query($sql);
+    return $books;
+}
